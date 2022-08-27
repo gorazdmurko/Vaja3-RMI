@@ -5,17 +5,6 @@
 2. Vaja3-RmiServer --> Vaja3-ServiceItf, Vaja3-Service
 3. Vaja3-RmiClient --> Vaja3-ServiceItf
 
-~~~~~~~~~~~~~~~~~~~~
-~~~~~ COMPILER ~~~~~
-~~~~~~~~~~~~~~~~~~~~
-IN EVERY POM.XML MAVEN COMPILER DEPENDENCY MUST BE PRESENT
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.10.1</version>
-</dependency>
-
 
 
 ~~~~~~~~~~~~~~~
