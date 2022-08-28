@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Vaja3-ServiceItf" />
+        <module name="Vaja4-RestService" />
+        <module name="Vaja3-Service" />
+        <module name="Vaja3-RmiServer" />
+        <module name="Vaja3-RmiClient" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11">
+      <module name="Vaja3-RmiClient" target="16" />
+      <module name="Vaja3-RmiServer" target="16" />
+      <module name="Vaja3-Service" target="16" />
+      <module name="Vaja3-ServiceItf" target="16" />
+      <module name="Vaja4-RestService" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
