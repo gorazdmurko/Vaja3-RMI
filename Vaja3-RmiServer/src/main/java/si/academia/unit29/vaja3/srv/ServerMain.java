@@ -28,14 +28,8 @@ public class ServerMain {
 
     public static void main(String[] args) throws RemoteException {
 
-        // binding the remote object to a RMI registry !!
         // 1. remote object ( remote implementation )
-        IAuthorService svc = new AuthorService();
-
-        List<Book> bookList = new ArrayList<Book>();
-        bookList.add(new Book("Kajetan Kovic", "Mladinska Knjiga", new GregorianCalendar(1999, 2, 6).getTime(), 110));
-        Author author = new Author("Kajetan Kovic", 87, false, bookList);
-        svc.createAuthor(author);
+        IAuthorService svc = createServiceObject(new AuthorService());
 
         try {
             // 2. create a stub of remote object -> stub is representation of remote object
@@ -44,7 +38,7 @@ public class ServerMain {
             // 3. create registry
             final Registry rmiReg = LocateRegistry.createRegistry(1099);
 
-            // 4. bind stub to the registry
+            // 4. bind stub (representation of remote object ) to RMI registry
             rmiReg.bind("AuthorService", stub);
             System.out.println("\nServer ready!");
 
@@ -66,6 +60,14 @@ public class ServerMain {
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+    }
+
+    private static IAuthorService createServiceObject(IAuthorService service) throws RemoteException {
+        List<Book> bookList = new ArrayList<Book>();
+        bookList.add(new Book("Kajetan Kovic", "Mladinska Knjiga", new GregorianCalendar(1999, 2, 6).getTime(), 110));
+        Author author = new Author("Kajetan Kovic", 87, false, bookList);
+        service.createAuthor(author);
+        return service;
     }
 }
 
