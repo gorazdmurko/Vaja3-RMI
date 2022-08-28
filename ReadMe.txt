@@ -1,3 +1,9 @@
+# MODULE DEPENDENCIES
+1. Vaja3-Service --> Vaja3-ServiceItf
+2. Vaja3-RmiServer --> Vaja3-ServiceItf, Vaja3-Service
+3. Vaja3-RmiClient --> Vaja3-ServiceItf
+
+
 ~~~~~~~~~~~~~~~~~~~~
 ~~~~~ COMPILER ~~~~~
 ~~~~~~~~~~~~~~~~~~~~
